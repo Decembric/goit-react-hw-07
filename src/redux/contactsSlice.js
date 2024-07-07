@@ -39,8 +39,9 @@ const contactsSlice = createSlice({
       state.error = false
       state.loading = true
     }).addCase(fetchRemoveContact.fulfilled, (state, action) => {
+      console.log(action)
       state.loading = false
-      const contactIndex = state.items.findIndex(contact => contact.id === action.payload);
+      const contactIndex = state.items.findIndex(contact => contact.id === action.payload.id);
       state.items.splice(contactIndex, 1);
     })
   }
