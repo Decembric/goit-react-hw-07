@@ -2,7 +2,7 @@ import Contact from "../Contact/Contact";
 import css from "./ContactList.module.css";
 import { useSelector } from "react-redux";
 import { selectContacts, selectFilters } from "../../redux/contactsSlice";
-// import { setFilter } from "../../redux/filtersSlice";
+
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -11,6 +11,8 @@ const ContactList = () => {
   contact.name.toLowerCase().includes(filterNames.toLowerCase())
   );
   console.log(filterContacts)
+  console.log(contacts)
+  console.log(filterNames)
 
  return (
     <ul className={css.personList}>

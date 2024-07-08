@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchAddContact, fetchContacts, fetchRemoveContact } from "./contactsOps";
 
-export const INITAL_STATE = {
+export const INITIAL_STATE = {
     contacts: {
     items: [],
     loading: false,
@@ -14,7 +14,7 @@ export const INITAL_STATE = {
 };
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: INITAL_STATE.contacts,
+  initialState: INITIAL_STATE.contacts,
   extraReducers: builder => {
     builder.addCase(fetchContacts.pending, state => {
       state.error = false

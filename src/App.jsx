@@ -14,9 +14,7 @@ const App = () => {
   const dispatch = useDispatch()
   const isLoading = useSelector(state => state.contacts.loading)
   const isError = useSelector(state => state.contacts.error)
-  // const setContacts = useSelector(state => state.contacts.items)
   useEffect(() => {
-    // if(setContacts.length < 0) return
   dispatch(fetchContacts())
 }, [dispatch])
   return (
