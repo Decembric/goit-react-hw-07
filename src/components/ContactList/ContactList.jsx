@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 const ContactList = () => {
 const filterContacts = useSelector(selectFilterContacts)
-console.log(filterContacts)
+
  return (
     <ul className={css.personList}>
       {Array.isArray(filterContacts) && 
